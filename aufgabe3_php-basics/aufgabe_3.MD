@@ -14,3 +14,8 @@ https://www.w3schools.com/html/html_headings.asp
 
 
 https://www.w3schools.com/php/php_looping_foreach.asp
+
+## Zusatzaufgabe    
+Fügt für jeden Schauspieler ein Bild ein. Dafür erstellt ihr ein neue Property _image_ im Array und gebt den Pfad zum Bild an.
+
+https://www.w3schools.com/tags/tag_img.asp
