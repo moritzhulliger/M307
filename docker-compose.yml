@@ -1,0 +1,40 @@
+services:
+  web:
+    image: php:8-apache
+    container_name: php-apache-container
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./apache-config.conf:/etc/apache2/sites-available/000-default.conf
+
+  mysql:
+    image: mysql:8.0
+    networks:
+      - my-network
+    container_name: mysql-container
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: your_database
+      MYSQL_USER: your_user
+      MYSQL_PASSWORD: your_password
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    networks:
+      - my-network
+    container_name: phpmyadmin-container
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root_password
+    depends_on:
+      - mysql
+
+networks:
+  my-network:
