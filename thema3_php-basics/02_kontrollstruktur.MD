@@ -2,9 +2,12 @@
 
 ## If
 
+
     if(ausdruck) {
         anweisung;
     }
+
+Nur wenn _ausdruck_ den Wert _true_ zurückgibt wird _anweisung_ ausgeführt.
 
     if($a > $b) {
         echo '$a ist grösser als $b';
