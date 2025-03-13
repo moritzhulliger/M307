@@ -4,6 +4,8 @@
     <title>Ein PHP-Beispiel</title>
 </head>
 <body>
-    HALLO TEST
+<?php 
+        echo 'Hello World!'
+    ?>
 </body>
 </html>

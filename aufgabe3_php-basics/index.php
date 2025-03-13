@@ -4,7 +4,7 @@
     <title>Ein PHP-Beispiel</title>
 </head>
 <body>
-
+<h1> Filmstars </h1>
 <?php
 $movieStars = [
     [
@@ -35,7 +35,24 @@ $movieStars = [
         'name' => 'Angelina Jolie',
         'movies' => ['Lara Croft: Tomb Raider', 'Maleficent', 'Mr. & Mrs. Smith']
     ]
-];?>
+];
+
+foreach ($movieStars as $actor) {
+     ?> 
+     <section> <h2> <?php echo $actor['name'] . "<br>"; ?> </h2>
+     <ul>
+       <?php
+       foreach ($actor['movies']  as $movie) {
+        echo "<li>" . ($movie) . "</li>";
+
+        }
+        ?>
+    </ul>
+     </section>
+    <?php
+  }
+
+?>
 
 </body>
 </html>
