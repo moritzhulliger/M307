@@ -8,5 +8,7 @@
 </head>
 <body>
     HALLO TEST
+
+    <?php phpinfo() ?>
 </body>
 </html>

@@ -9,7 +9,8 @@
 $movieStars = [
     [
         'name' => 'Leonardo DiCaprio',
-        'movies' => ['Inception', 'Titanic', 'The Wolf of Wall Street']
+        'movies' => ['Inception', 'Titanic', 'The Wolf of Wall Street'],
+        'image' => 'images/Download.webp'
     ],
     [
         'name' => 'Scarlett Johansson',
@@ -54,6 +55,8 @@ foreach ($movieStars as $actor) {
 
 
 ?>
+
+<img src="<?php echo $movieStars[0]['image']?>" alt="Girl in a jacket" width="500" height="600">
 
 </body>
 </html>
