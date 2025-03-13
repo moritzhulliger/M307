@@ -35,7 +35,25 @@ $movieStars = [
         'name' => 'Angelina Jolie',
         'movies' => ['Lara Croft: Tomb Raider', 'Maleficent', 'Mr. & Mrs. Smith']
     ]
-];?>
+];
+
+foreach ($movieStars as $actor) {
+    echo "<section>";
+    echo $actor['name'];
+
+
+    foreach ($actor['movies'] as $movie) {
+        echo $movie;
+
+    }
+    echo "</section>";
+
+  }
+
+
+
+
+?>
 
 </body>
 </html>

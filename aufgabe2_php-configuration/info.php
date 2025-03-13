@@ -3,7 +3,7 @@
 <head>
     <title>Ein PHP-Beispiel</title>
     <?php 
-        hier kann ich php code schreiben 
+    
     ?>
 </head>
 <body>
