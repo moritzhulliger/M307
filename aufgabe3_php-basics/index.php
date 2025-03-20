@@ -10,53 +10,56 @@ $movieStars = [
     [
         'name' => 'Leonardo DiCaprio',
         'movies' => ['Inception', 'Titanic', 'The Wolf of Wall Street'],
-        'image' => 'images/Download.webp'
+        'image' => 'img/LeandroDiCabrio.jpg'
     ],
     [
         'name' => 'Scarlett Johansson',
-        'movies' => ['Lost in Translation', 'Lucy', 'Black Widow']
+        'movies' => ['Lost in Translation', 'Lucy', 'Black Widow'],
+        'image' => 'img/ScarlettJohansson.jpg'
+
     ],
     [
         'name' => 'Tom Hanks',
-        'movies' => ['Forrest Gump', 'Cast Away', 'Saving Private Ryan']
+        'movies' => ['Forrest Gump', 'Cast Away', 'Saving Private Ryan'],
+        'image' => 'img/TomHanks.jpg'
     ],
     [
         'name' => 'Morgan Freeman',
-        'movies' => ['The Shawshank Redemption', 'Se7en', 'Bruce Almighty']
+        'movies' => ['The Shawshank Redemption', 'Se7en', 'Bruce Almighty'],
+        'image' => 'img/MorganFreeman.webp'
     ],
     [
         'name' => 'Natalie Portman',
-        'movies' => ['Black Swan', 'V for Vendetta', 'Closer']
+        'movies' => ['Black Swan', 'V for Vendetta', 'Closer'],
+        'image' => 'img/NataliePortman.jpg'
     ],
     [
         'name' => 'Robert Downey Jr.',
-        'movies' => ['Iron Man', 'Sherlock Holmes', 'Chaplin']
+        'movies' => ['Iron Man', 'Sherlock Holmes', 'Chaplin'],
+        'image' => 'img/RobertDowneyJr.jpg'
     ],
     [
         'name' => 'Angelina Jolie',
-        'movies' => ['Lara Croft: Tomb Raider', 'Maleficent', 'Mr. & Mrs. Smith']
+        'movies' => ['Lara Croft: Tomb Raider', 'Maleficent', 'Mr. & Mrs. Smith'],
+        'image' => 'img/AngelinaJolie.jpg'
     ]
-];
+];?>
 
-foreach ($movieStars as $actor) {
-    echo "<section>";
-    echo $actor['name'];
-
-
-    foreach ($actor['movies'] as $movie) {
-        echo $movie;
-
-    }
-    echo "</section>";
-
-  }
-
-
-
-
-?>
-
-<img src="<?php echo $movieStars[0]['image']?>" alt="Girl in a jacket" width="500" height="600">
-
+<?php
+foreach ($movieStars as $Actor) {
+    ?> <section>
+    <h2> <?php echo $Actor['name'] . "<br>"; ?> </h2>  
+    <ul>
+        <?php
+        foreach ($Actor['movies'] as $movie) {
+            echo "<li>" . ($movie) . "</li>";
+        }
+        ?>
+    </ul>
+    <img src="<?php echo $Actor['image'] ?>" alt="<?php echo $Actor['name'] ?>" width="500" height="600">
+    </section>
+<?php
+}
+?>  
 </body>
 </html>
