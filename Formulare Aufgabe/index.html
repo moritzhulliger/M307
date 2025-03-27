@@ -1,0 +1,33 @@
+<!-- Hilreiche Links:
+ 
+https://www.w3schools.com/php/php_forms.asp
+ 
+https://www.w3schools.com/html/html_form_elements.asp
+ 
+Aufgabe:
+ 
+Erstelle eine einfache HTML-Seite mit einem Anmeldeformular für eine Veranstaltung, einen Kurs oder eine andere Aktivität. Das Formular soll folgende Felder enthalten:
+Name (Pflichtfeld)
+E-Mail-Adresse (Pflichtfeld)
+Veranstaltungsauswahl (z. B. Dropdown mit „Workshop 1“, „Workshop 2“)
+Ein Textfeld für zusätzliche Bemerkungen
+Eine Checkbox zur Bestätigung der Teilnahmebedingungen
+Einen Absenden-Button
+Sobald das Formular abgeschickt wird, soll eine PHP-Seite die eingegebenen Daten verarbeiten und eine Dankeschön-Nachricht ausgeben, die den Namen und die gewählte Veranstaltung enthält.
+ -->
+
+
+<html>
+<body>
+
+    <form action="actions.php" method="POST">
+        Vorname: <input type="text" name="vorname" required><br>
+        Nachname: <input type="text" name="nachname" required><br>
+        E-Mail: <input type="email" name="email" required><br>
+        Bemerkungen<br><textarea></textarea>
+
+        <input type="submit" value="Absenden">
+    </form>
+
+</body>
+</html>
